@@ -42,7 +42,7 @@ services:
             FTP_USER: user
             FTP_PASS: test
             #PASV_ADDRESS: localhost
-            pASV_ENABLE: no
+            PASV_ENABLE: no
             # PASV_MIN_PORT: 2120
             # PASV_MAX_PORT: 2121
         ports: 
