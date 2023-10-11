@@ -35,5 +35,26 @@ services:
             MYSQL_USER: root
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
+
+    ftp:
+        image: fauria/vsftpd
+        environment:
+            FTP_USER: user
+            FTP_PASS: test
+            #PASV_ADDRESS: localhost
+            pASV_ENABLE: NO
+            # PASV_MIN_PORT: 2120
+            # PASV_MAX_PORT: 2121
+        ports: 
+            - "2120:20"
+            - "2121:21"
+
+        volumes:
+            - ./www:/home/vsftpd/user
+        # links:
+        #     - db
+        networks:
+            - default
+    
 volumes:
     persistent:
