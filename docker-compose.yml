@@ -45,6 +45,7 @@ services:
             PASV_ENABLE: "YES"
             PASV_MIN_PORT: 21100
             PASV_MAX_PORT: 21100
+            FILE_OPEN_MODE: 777
         ports: 
             - "2120:20"
             - "2121:21"
