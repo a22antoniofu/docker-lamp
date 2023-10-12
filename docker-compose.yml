@@ -41,13 +41,14 @@ services:
         environment:
             FTP_USER: user
             FTP_PASS: test
-            #PASV_ADDRESS: localhost
-            PASV_ENABLE: false
-            # PASV_MIN_PORT: 2120
-            # PASV_MAX_PORT: 2121
+            PASV_ADDRESS: ftp
+            PASV_ENABLE: "YES"
+            PASV_MIN_PORT: 21100
+            PASV_MAX_PORT: 21100
         ports: 
             - "2120:20"
             - "2121:21"
+            - "21100:21100"
 
         volumes:
             - ./www:/home/vsftpd/user
