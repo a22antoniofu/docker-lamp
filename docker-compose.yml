@@ -41,7 +41,7 @@ services:
         environment:
             FTP_USER: user
             FTP_PASS: test
-            PASV_ADDRESS: ftp
+            PASV_ADDRESS: localhost
             PASV_ENABLE: "YES"
             PASV_MIN_PORT: 21100
             PASV_MAX_PORT: 21100
